@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf8">
     <title></title>
-<link href="././css/popup.css" rel="stylesheet"></head>
-<body class="body">
-<div id="one-click-block" hidden></div>
-<div id="welcome"></div>
-<div id="downloads" hidden></div>
+    <link href="././css/popup.css" rel="stylesheet">
+</head>
 
-<script type="text/mustache-template" id="list-template">
-    <div class="downloads-list">
+<body class="body">
+    <div id="one-click-block" hidden></div>
+    <div id="welcome"></div>
+    <div id="downloads" hidden></div>
+
+    <script type="text/mustache-template" id="list-template">
+        <div class="downloads-list">
         <h1>Video</h1>
         {{#downloads}}
             {{>media_template}}
@@ -41,8 +44,8 @@
     </div>
     <!--<a href="#" id="close-popup" tabindex="-1">×</a>-->
 </script>
-<script type="text/mustache-template" id="welcome-template">
-    <div class="welcome">
+    <script type="text/mustache-template" id="welcome-template">
+        <div class="welcome">
         <a href="#" id="close-popup" tabindex="-1">×</a>
         <h1>{{i18n_welcome_title}}</h1>
         <div class="welcome-text">{{i18n_welcome_text}}</div>
@@ -51,16 +54,19 @@
         </div>
     </div>
 </script>
-<script type="text/mustache-template" id="one-click-template">
-    <span class="one-click-starting">{{i18n_starting_download}}</span>
+    <script type="text/mustache-template" id="one-click-template">
+        <span class="one-click-starting">{{i18n_starting_download}}</span>
     {{#media}}
     <span class="one-click-format label label-info">{{ext}} {{#quality}}, {{quality}}{{/quality}}</span>
     <span class="one-click-title-container">
-				<span class="one-click-title">
-				 "{{title}}"
-				 </span>
-			 </span>
+                <span class="one-click-title">
+                 "{{title}}"
+                 </span>
+             </span>
     {{/media}}
 </script>
-<script type="text/javascript" src="./common/common.js"></script><script type="text/javascript" src="./popup/popup.js"></script></body>
+    <script type="text/javascript" src="./common/common.js"></script>
+    <script type="text/javascript" src="./popup/popup.js"></script>
+</body>
+
 </html>
